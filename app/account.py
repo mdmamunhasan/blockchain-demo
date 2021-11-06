@@ -1,6 +1,7 @@
 from uuid import uuid4
 from fastecdsa import curve, ecdsa, keys
 
+
 class Account:
     def generate_private_key(self):
         private_key = keys.gen_private_key(curve.secp256k1)
@@ -9,6 +10,7 @@ class Account:
     def generate_public_key(self, private_key):
         public_key = keys.get_public_key(private_key, curve.secp256k1)
         return public_key
+
 
 account = Account()
 
